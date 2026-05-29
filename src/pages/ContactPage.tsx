@@ -30,7 +30,6 @@ const ContactPage: React.FC = () => {
           muted
           loop
           playsInline
-          poster="/assets/images/elevon_hero_bg.png"
         >
           <source src="/assets/videos/hero-background.mp4" type="video/mp4" />
         </video>

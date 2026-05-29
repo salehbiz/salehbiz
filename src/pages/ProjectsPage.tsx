@@ -11,7 +11,7 @@ const ProjectsPage: React.FC = () => {
 
       {/* ─── Page-wide Background Video (Absolute at top) ─── */}
       <div className="projects-bg-wrapper">
-        <video className="projects-bg-video" autoPlay muted loop playsInline poster="/assets/images/elevon_hero_bg.png">
+        <video className="projects-bg-video" autoPlay muted loop playsInline>
           <source src="/assets/videos/hero-background.mp4" type="video/mp4" />
         </video>
         <div className="projects-bg-overlay"></div>
