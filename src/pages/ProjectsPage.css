@@ -40,8 +40,8 @@
   inset: 0;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(8px); /* reduced from 14px */
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .projects-bg-fade {
@@ -67,8 +67,8 @@
   left: 0;
   right: 0;
   height: 350px;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px); /* reduced from 15px */
+  -webkit-backdrop-filter: blur(10px);
   mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 40%, transparent 100%);
   -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 40%, transparent 100%);
   z-index: 2;
