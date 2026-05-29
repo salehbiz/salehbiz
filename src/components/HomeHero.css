@@ -73,7 +73,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 14vh;
+  padding-top: 21vh; /* increased from 14vh for vertical centering */
 }
  
 .rating {
@@ -211,7 +211,7 @@
     padding-bottom: 50px;
   }
   .heroContent {
-    padding-top: 80px;
+    padding-top: 150px; /* increased from 80px to clear the fixed mobile header */
     padding-left: 20px;
     padding-right: 20px;
   }
