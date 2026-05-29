@@ -76,7 +76,7 @@
   align-items: center;
   justify-content: center;   /* vertical centring */
   min-height: 60dvh;
-  padding: 60px 48px 120px; /* bottom pad allows overlap space for cards */
+  padding: 156px 48px 120px; /* added 96px for fixed navbar */
   box-sizing: border-box;
 }
 
@@ -250,7 +250,7 @@
 
 @media (max-width: 768px) {
   .project-hero-header {
-    padding: 60px 24px 80px;
+    padding: 136px 24px 80px; /* added 96px for fixed navbar */
     min-height: auto;
   }
   .portfolio-badge {

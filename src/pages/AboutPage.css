@@ -45,7 +45,7 @@
 .about-hero-section {
   position: relative;
   z-index: 1;
-  padding: 80px 80px 100px 80px;
+  padding: 176px 80px 100px 80px; /* added 96px for fixed navbar */
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
@@ -459,7 +459,7 @@
 
 @media (max-width: 768px) {
   .about-hero-section {
-    padding-top: 40px;
+    padding-top: 136px; /* added 96px for fixed navbar */
     padding-bottom: 60px;
   }
   .about-hero-section,

@@ -261,3 +261,25 @@
     margin-top: 32px;
   }
 }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Scroll-Driven Animations (Progressive Enhancement)
+   ────────────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: scroll()) and (animation-range: exit)) {
+    @keyframes hero-zoom {
+      from {
+        transform: scale(1.08);
+      }
+      to {
+        transform: scale(1.22);
+      }
+    }
+
+    .heroVideo {
+      animation: hero-zoom linear both;
+      animation-timeline: scroll(root);
+      animation-range: exit 0% exit 100%;
+    }
+  }
+}

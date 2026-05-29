@@ -1,9 +1,36 @@
 /* Unified Component Navbar.css */
 
 .navbar-header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar {
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scrolled sticky header transitions */
+.navbar-header.scrolled {
+  background: rgba(12, 1, 1, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-header.scrolled .navbar {
+  height: 72px; /* Shrinks container size */
+}
+
+/* Adjust mobile drawer position when header shrinks */
+.navbar-header.scrolled .mobileDrawer {
+  top: 72px;
 }
 
 .navRightMobileWrapper {

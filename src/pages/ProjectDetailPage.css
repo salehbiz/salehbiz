@@ -44,7 +44,7 @@
 .project-hero-section {
   position: relative;
   z-index: 1;
-  padding: 60px 80px 40px 80px;
+  padding: 156px 80px 40px 80px; /* added 96px for fixed navbar */
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
@@ -619,7 +619,7 @@
 
 @media (max-width: 768px) {
   .project-hero-section {
-    padding-top: 40px;
+    padding-top: 136px; /* added 96px for fixed navbar */
     padding-bottom: 20px;
   }
   .project-hero-section,

@@ -80,7 +80,7 @@ const HomePage: React.FC = () => {
 
         <div className="about-cards-grid">
           {/* Card 1: Unclear Direction */}
-          <div className="about-card card-3d">
+          <div className="about-card card-3d scroll-reveal">
             <div className="card-icon-container">
               <div className="icon-3d direction-3d">
                 <svg width="160" height="160" viewBox="0 0 160 160" fill="none">
@@ -134,7 +134,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Card 2: Systems */}
-          <div className="about-card card-3d highlighted middle-card-bg" style={{ 
+          <div className="about-card card-3d highlighted middle-card-bg scroll-reveal" style={{ 
             backgroundImage: "url('/assets/images/middle-bg.png')", 
             backgroundSize: 'cover', 
             backgroundPosition: 'center', 
@@ -199,7 +199,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Card 3: Growth */}
-          <div className="about-card card-3d">
+          <div className="about-card card-3d scroll-reveal">
             <div className="card-icon-container">
               <div className="icon-3d growth-3d">
                 <svg width="160" height="160" viewBox="0 0 160 160" fill="none">
@@ -252,7 +252,7 @@ const HomePage: React.FC = () => {
             
             <div className="hww-cards-list">
               {/* Card 1: Discover */}
-              <div className="hww-card">
+              <div className="hww-card scroll-reveal">
                 <div className="hww-card-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="11" cy="11" r="8"></circle>
@@ -267,7 +267,7 @@ const HomePage: React.FC = () => {
               </div>
 
               {/* Card 2: Prototype */}
-              <div className="hww-card">
+              <div className="hww-card scroll-reveal">
                 <div className="hww-card-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="3"></circle>
@@ -282,7 +282,7 @@ const HomePage: React.FC = () => {
               </div>
 
               {/* Card 3: Build */}
-              <div className="hww-card">
+              <div className="hww-card scroll-reveal">
                 <div className="hww-card-icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
@@ -298,7 +298,7 @@ const HomePage: React.FC = () => {
               </div>
 
               {/* Card 4: Review and Launch */}
-              <div className="hww-card scale-card" style={{ 
+              <div className="hww-card scale-card scroll-reveal" style={{ 
                 backgroundImage: "url('/assets/images/Zk98K7iTo5ArC18iekSAcKmHTQ.png')", 
                 backgroundSize: 'cover', 
                 backgroundPosition: 'center', 
@@ -476,7 +476,7 @@ const HomePage: React.FC = () => {
 
         <div className="services-grid-container">
           {/* Card 1: Websites */}
-          <div className="service-card">
+          <div className="service-card scroll-reveal">
             <div className="service-icon-box">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
             </div>
@@ -485,7 +485,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Card 2: Brand Identity */}
-          <div className="service-card">
+          <div className="service-card scroll-reveal">
             <div className="service-icon-box">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
             </div>
@@ -494,7 +494,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Card 3: E-Commerce */}
-          <div className="service-card">
+          <div className="service-card scroll-reveal">
             <div className="service-icon-box">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
             </div>
@@ -503,7 +503,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Card 4: AI Agents */}
-          <div className="service-card">
+          <div className="service-card scroll-reveal">
             <div className="service-icon-box">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
             </div>
@@ -512,7 +512,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Card 5: CRM & Automations */}
-          <div className="service-card">
+          <div className="service-card scroll-reveal">
             <div className="service-icon-box">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>
             </div>
@@ -521,7 +521,7 @@ const HomePage: React.FC = () => {
           </div>
 
           {/* Card 6: Full Systems Build */}
-          <div className="service-card">
+          <div className="service-card scroll-reveal">
             <div className="service-icon-box">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
             </div>
@@ -543,7 +543,7 @@ const HomePage: React.FC = () => {
           <div className="testimonials-rows-container">
             <div className="testimonials-row">
               {/* Card 1: Standard Card */}
-              <div className="testimonial-card standard-card">
+              <div className="testimonial-card standard-card scroll-reveal">
                 <div className="testimonial-stars">
                   <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
@@ -558,7 +558,7 @@ const HomePage: React.FC = () => {
               </div>
 
               {/* Card 2: Highlighted Featured Card (Image Based) */}
-              <div className="testimonial-card highlighted-card featured-top-card" style={{ backgroundImage: "url('/assets/images/Zk98K7iTo5ArC18iekSAcKmHTQ.png')" }}>
+              <div className="testimonial-card highlighted-card featured-top-card scroll-reveal" style={{ backgroundImage: "url('/assets/images/Zk98K7iTo5ArC18iekSAcKmHTQ.png')" }}>
                 <div className="highlighted-card-content">
                   <div className="testimonial-stars">
                     <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -573,7 +573,7 @@ const HomePage: React.FC = () => {
               </div>
 
               {/* Card 3: Standard Card */}
-              <div className="testimonial-card standard-card">
+              <div className="testimonial-card standard-card scroll-reveal">
                 <div className="testimonial-stars">
                   <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
@@ -590,7 +590,7 @@ const HomePage: React.FC = () => {
 
             <div className="testimonials-row">
               {/* Card 4: Standard Card */}
-              <div className="testimonial-card standard-card">
+              <div className="testimonial-card standard-card scroll-reveal">
                 <div className="testimonial-stars">
                   <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
@@ -605,7 +605,7 @@ const HomePage: React.FC = () => {
               </div>
 
               {/* Card 5: Standard Card */}
-              <div className="testimonial-card standard-card">
+              <div className="testimonial-card standard-card scroll-reveal">
                 <div className="testimonial-stars">
                   <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                 </div>
@@ -620,7 +620,7 @@ const HomePage: React.FC = () => {
               </div>
 
               {/* Card 6: Highlighted Featured Card (Image Based) */}
-              <div className="testimonial-card highlighted-card featured-top-card" style={{ backgroundImage: "url('/assets/images/Zk98K7iTo5ArC18iekSAcKmHTQ.png')" }}>
+              <div className="testimonial-card highlighted-card featured-top-card scroll-reveal" style={{ backgroundImage: "url('/assets/images/Zk98K7iTo5ArC18iekSAcKmHTQ.png')" }}>
                 <div className="highlighted-card-content">
                   <div className="testimonial-stars">
                     <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
