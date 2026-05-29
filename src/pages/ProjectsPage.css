@@ -31,8 +31,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.05); /* Slight zoom to avoid edges */
+  transform: scale(1.08); /* scale up slightly to hide blurred outer edges */
   z-index: 0;
+  filter: blur(20px);
+  -webkit-filter: blur(20px);
 }
 
 .projects-bg-overlay {
@@ -40,8 +42,6 @@
   inset: 0;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(8px); /* reduced from 14px */
-  -webkit-backdrop-filter: blur(8px);
 }
 
 .projects-bg-fade {
