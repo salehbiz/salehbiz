@@ -18,6 +18,7 @@ const HomeHero: React.FC = () => {
       <div className="overlay"></div>
       <div className="shadow-vignette"></div>
       <div className="bottomShadow"></div>
+      <div className="bottomBlur"></div>
       
       <Navbar activePage="home" />
 

@@ -16,6 +16,7 @@ const ProjectsPage: React.FC = () => {
         </video>
         <div className="projects-bg-overlay"></div>
         <div className="projects-bg-fade"></div>
+        <div className="projects-bg-blur"></div>
       </div>
 
       {/* Navbar */}

@@ -36,6 +36,7 @@ const ContactPage: React.FC = () => {
         <div className="contact-hero-overlay"></div>
         <div className="contact-hero-vignette"></div>
         <div className="contact-hero-bottom-shadow"></div>
+        <div className="contact-hero-bottom-blur"></div>
       </div>
 
       {/* Global Master Navbar */}
