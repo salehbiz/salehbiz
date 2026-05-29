@@ -1,0 +1,70 @@
+/* src/framer-design-system.css */
+
+:root {
+  /* Colors */
+  --surface-base: #000000;
+  --surface-raised: #141415;
+  --surface-overlay: #F8F8F1;
+  --text-primary: #89786E;
+  --text-2: #D8AD9D;
+  --text-tertiary: #D1CFD0;
+  --border-default: #494453;
+  --destructive: #D8AD9D;
+  --warning: #F8F8F1;
+
+  /* Accent focus outline */
+  --focus-outline-color: #5E6AD2;
+
+  /* Spacing Scale (4px Grid Constraints) */
+  --space-1px: 1px;
+  --space-2px: 2px;
+  --space-3px: 3px;
+  --space-4px: 4px;
+  --space-5px: 5px;
+  --space-6px: 6px;
+  --space-8px: 8px;
+  --space-9px: 9px;
+
+  /* Border Radius Scale */
+  --radius-1px: 1px;
+  --radius-2px: 2px;
+  --radius-3px: 3px;
+  --radius-4px: 4px;
+  --radius-7px: 7px;
+  --radius-8px: 8px;
+  --radius-15px: 15px;
+  --radius-17px: 17px;
+}
+
+/* Typography styles based on framer-ui-skills constraints */
+.heading-1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 93px;
+  font-weight: 700;
+  color: #F4F4F4;
+  text-wrap: balance; /* Modern equivalent of text-balance */
+}
+
+.body-framer {
+  font-family: 'Inter', sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-wrap: pretty; /* Modern equivalent of text-pretty */
+}
+
+/* Base button, hover, focus, and disabled constraints */
+button, a.btn, .btn {
+  transition: background-color 200ms ease, opacity 200ms ease, outline 200ms ease, transform 200ms ease;
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--focus-outline-color) !important;
+  outline-offset: 2px !important;
+}
+
+/* Interactive States: Hover and Disabled */
+button:disabled, a:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}

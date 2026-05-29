@@ -1,0 +1,15 @@
+{
+  "name": "salehbiz",
+  "mode": "vendored",
+  "dependencies": {
+    "ihlamury/design-skills": {
+      "version": "126714ec5df13a2c97ce1b3975e5a51d2592d967",
+      "source": "https://github.com/ihlamury/design-skills",
+      "include": {
+        "skills": [
+          "framer-ui-skills"
+        ]
+      }
+    }
+  }
+}

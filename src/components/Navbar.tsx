@@ -1,0 +1,56 @@
+import React, { useState } from 'react';
+import './Navbar.css';
+
+interface NavbarProps {
+  activePage?: 'home' | 'about' | 'projects' | 'contact' | 'blog';
+}
+
+const Navbar: React.FC<NavbarProps> = ({ activePage }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <header className={`navbar-header ${isMenuOpen ? 'menu-open' : ''}`}>
+      <div className="navbar">
+        <a href="/" className="logo">SALEHBIZ</a>
+        
+        <div className="navCenter">
+          <a href="/about" className={activePage === 'about' ? 'active' : ''}>About</a>
+          <a href="/project" className={activePage === 'projects' ? 'active' : ''}>Projects</a>
+          <a href="#blog" className={activePage === 'blog' ? 'active' : ''}>Blog</a>
+          <a href="/contact" className={activePage === 'contact' ? 'active' : ''}>Contact</a>
+        </div>
+        
+        <div className="navRightMobileWrapper">
+          <a href="/contact" className="navRight">Book a Call</a>
+          
+          <button 
+            className="mobileMenuToggle" 
+            onClick={toggleMenu} 
+            aria-label="Toggle Navigation Menu"
+            aria-expanded={isMenuOpen}
+          >
+            <span className="hamburger-line line-1"></span>
+            <span className="hamburger-line line-2"></span>
+          </button>
+        </div>
+      </div>
+      
+      {/* Mobile Drawer Dropdown */}
+      <div className={`mobileDrawer ${isMenuOpen ? 'open' : ''}`}>
+        <div className="mobileDrawerContent">
+          <a href="/about" className={`mobileNavLink ${activePage === 'about' ? 'active' : ''}`}>About</a>
+          <a href="/project" className={`mobileNavLink ${activePage === 'projects' ? 'active' : ''}`}>Projects</a>
+          <a href="#blog" className={`mobileNavLink ${activePage === 'blog' ? 'active' : ''}`}>Blog</a>
+          <a href="/contact" className={`mobileNavLink ${activePage === 'contact' ? 'active' : ''}`}>Contact</a>
+          <a href="/contact" className="mobileMenuCTA">Book a Call</a>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;

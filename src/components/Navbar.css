@@ -1,0 +1,147 @@
+/* Unified Component Navbar.css */
+
+.navbar-header {
+  position: relative;
+  width: 100%;
+  z-index: 100;
+}
+
+.navRightMobileWrapper {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Hide Hamburger Menu Trigger on Desktops */
+.mobileMenuToggle {
+  display: none;
+}
+
+/* Mobile Drawer - Dropdown Navigation Overlay */
+.mobileDrawer {
+  position: absolute;
+  top: 96px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: rgba(13, 1, 1, 0.95);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(-12px);
+  z-index: 99;
+}
+
+.mobileDrawer.open {
+  height: auto;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  padding: 32px 24px 44px 24px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
+}
+
+.mobileDrawerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+}
+
+.mobileNavLink {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 10px 0;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  border-radius: 99px;
+}
+
+.mobileNavLink:hover,
+.mobileNavLink.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mobileNavLink.active {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.mobileMenuCTA {
+  margin-top: 8px;
+  display: inline-block;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 99px;
+  padding: 14px 48px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+}
+
+.mobileMenuCTA:active {
+  transform: scale(0.97);
+}
+
+/* ══════════════════════════════════════════════
+   MOBILE MEDIA OVERRIDES
+   ══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .mobileMenuToggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 101;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    outline: none;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  
+  .mobileMenuToggle:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.18);
+  }
+  
+  .hamburger-line {
+    display: block;
+    width: 16px;
+    height: 1.5px;
+    background-color: #fff;
+    border-radius: 99px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+  }
+  
+  /* Morphing hamburger lines into 'X' when open */
+  .menu-open .line-1 {
+    transform: translateY(3.25px) rotate(45deg);
+  }
+  
+  .menu-open .line-2 {
+    transform: translateY(-3.25px) rotate(-45deg);
+  }
+}
