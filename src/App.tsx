@@ -1,12 +1,6 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Lenis from 'lenis';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import AriaPage from './pages/AriaPage';
-import ProjectsPage from './pages/ProjectsPage';
-import ProjectDetailPage from './pages/ProjectDetailPage';
-import ContactPage from './pages/ContactPage';
 import './App.css';
 import 'lenis/dist/lenis.css';
 
@@ -36,18 +30,9 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/project" element={<ProjectsPage />} />
-          <Route path="/project/:slug" element={<ProjectDetailPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/aria" element={<AriaPage />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="App">
+      <Outlet />
+    </div>
   );
 }
 
