@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage }) => {
           <a href="/about" className={activePage === 'about' ? 'active' : ''}>About</a>
           <a href="/services" className={activePage === 'services' ? 'active' : ''}>Services</a>
           <a href="/project" className={activePage === 'projects' ? 'active' : ''}>Projects</a>
-          <a href="#blog" className={activePage === 'blog' ? 'active' : ''}>Blog</a>
+          <a href="/blog" className={activePage === 'blog' ? 'active' : ''}>Blog</a>
           <a href="/contact" className={activePage === 'contact' ? 'active' : ''}>Contact</a>
         </div>
         
@@ -61,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ activePage }) => {
           <a href="/about" className={`mobileNavLink ${activePage === 'about' ? 'active' : ''}`}>About</a>
           <a href="/services" className={`mobileNavLink ${activePage === 'services' ? 'active' : ''}`}>Services</a>
           <a href="/project" className={`mobileNavLink ${activePage === 'projects' ? 'active' : ''}`}>Projects</a>
-          <a href="#blog" className={`mobileNavLink ${activePage === 'blog' ? 'active' : ''}`}>Blog</a>
+          <a href="/blog" className={`mobileNavLink ${activePage === 'blog' ? 'active' : ''}`}>Blog</a>
           <a href="/contact" className={`mobileNavLink ${activePage === 'contact' ? 'active' : ''}`}>Contact</a>
           <a href="/contact" className="mobileMenuCTA">Book a Call</a>
         </div>

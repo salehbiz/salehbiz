@@ -1,0 +1,491 @@
+/* BlogPostPage.css */
+
+.blog-post-detail-container {
+  background-color: #000000; /* Pure black background matching ProjectsPage */
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: clip;
+  box-sizing: border-box;
+}
+
+/* Hero Wrapper with Background Image */
+.blog-post-hero-wrapper {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Immersive Dark Overlay to Protect Typography Contrast for the Hero Section */
+.blog-post-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.2) 75%, #000000 100%),
+              radial-gradient(circle at center, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.85) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Navbar active override */
+.blog-post-detail-container .navbar {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Section Layout */
+.blog-post-hero-section {
+  position: relative;
+  z-index: 1;
+  padding: 156px 40px 40px 40px; /* added 96px for fixed navbar, reduced side padding */
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Back navigation button */
+.blog-post-hero-section .back-link-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 44px;
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blog-post-hero-section .back-link-btn:hover {
+  color: #fff;
+  transform: translateX(-4px);
+}
+
+.blog-post-hero-section .back-link-btn .arrow {
+  font-size: 18px;
+}
+
+/* Meta info row */
+.blog-post-hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.post-category-badge {
+  background-color: #fe7701;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 99px;
+  letter-spacing: -0.1px;
+  box-shadow: 0 4px 15px rgba(254, 119, 1, 0.2);
+}
+
+.blog-meta-divider {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+}
+
+.blog-post-date,
+.blog-post-readtime {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 500;
+}
+
+/* Typography styles matching high-end editorial feel */
+.blog-post-title {
+  font-size: clamp(38px, 5.5vw, 68px);
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -2px;
+  margin: 0 0 24px 0;
+  color: #fff;
+  max-width: 1000px;
+  text-wrap: balance;
+}
+
+.blog-post-subtitle {
+  font-size: clamp(18px, 2.2vw, 24px);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 840px;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* ==============================================
+   COVER IMAGE SECTION
+   ============================================== */
+.blog-cover-image-section {
+  width: 100%;
+  max-width: 1200px; /* Aligned with hero and body */
+  margin: 0 auto;
+  padding: 20px 40px 80px 40px; /* Reduced side padding */
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.blog-cover-image-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+  background: #000;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  aspect-ratio: 16 / 9; /* Sleek cinema aspect ratio */
+}
+
+.blog-cover-image-wrapper:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 45px 90px rgba(254, 119, 1, 0.08); /* Subtle orange brand glow */
+}
+
+.blog-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==============================================
+   ARTICLE BODY - Editorial layout
+   ============================================== */
+.blog-article-body {
+  width: 100%;
+  max-width: 1200px; /* Aligned with hero and cover image */
+  margin: 0 auto;
+  padding: 0 40px 80px 40px; /* Reduced side padding */
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.blog-article-content-wrapper {
+  width: 100%;
+  max-width: 100%; /* Matches the image and section width */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.blog-article-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-section-header {
+  font-size: clamp(22px, 2.8vw, 32px);
+  font-weight: 500;
+  letter-spacing: -0.8px;
+  color: #fff;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.blog-section-paragraph {
+  font-size: clamp(16px, 1.9vw, 18.5px);
+  line-height: 1.85; /* Generous breathing room */
+  color: rgba(255, 255, 255, 0.82); /* Soft white for long-form comfort */
+  margin: 0;
+  font-weight: 400;
+  text-align: left;
+}
+
+.blog-section-image-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 36px 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  background: #000;
+  aspect-ratio: 16 / 10;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blog-section-image-wrapper:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 50px rgba(254, 119, 1, 0.05);
+}
+
+.blog-section-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==============================================
+   NEXT ARTICLE NAV DRAWER
+   ============================================== */
+.next-article-section {
+  width: 100%;
+  max-width: 1200px; /* Aligned with rest of the page content */
+  margin: 0 auto;
+  padding: 40px 40px 80px 40px; /* Reduced side padding */
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.next-article-container {
+  width: 100%;
+  max-width: 100%; /* Aligned with rest of the page content */
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.next-article-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+}
+
+.next-article-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 24px 32px;
+  background-color: #0c0c0d;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.next-article-link:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  background-color: #121214;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.next-article-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  max-width: 85%;
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+}
+
+.next-article-arrow {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.4);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s ease;
+}
+
+.next-article-link:hover .next-article-arrow {
+  color: #fff;
+  transform: translateX(6px);
+}
+
+/* ==============================================
+   FINAL CTA CARD Glow style
+   ============================================== */
+.blog-cta-section {
+  padding: 120px 80px;
+  background: radial-gradient(circle at center, rgba(254, 119, 1, 0.04) 0%, transparent 60%);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.blog-cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-cta-section .cta-title {
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 600;
+  letter-spacing: -2px;
+  margin: 0 0 16px 0;
+  color: #fff;
+  line-height: 1.15;
+}
+
+.blog-cta-section .cta-subtitle {
+  font-size: clamp(16px, 1.8vw, 20px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 44px 0;
+}
+
+.blog-cta-section .cta-btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 18px 40px;
+  border-radius: 99px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+}
+
+.blog-cta-section .cta-btn:hover {
+  background-color: #fff;
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* ==============================================
+   404 Blog Not Found Screen
+   ============================================== */
+.blog-post-not-found {
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.blog-post-not-found h1 {
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 700;
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+}
+
+.blog-post-not-found p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 500px;
+  margin: 0 auto 32px auto;
+}
+
+.btn-back-blog {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: 99px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+.btn-back-blog:hover {
+  background-color: #ffffff;
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* ==============================================
+   Responsive Queries
+   ============================================== */
+@media (max-width: 1024px) {
+  .blog-post-hero-section,
+  .blog-cover-image-section,
+  .blog-article-body,
+  .next-article-section,
+  .blog-cta-section {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-post-hero-section {
+    padding-top: 136px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .blog-post-hero-section .back-link-btn {
+    margin-bottom: 24px;
+  }
+  .blog-post-title {
+    font-size: clamp(32px, 8.5vw, 48px);
+    letter-spacing: -1.2px;
+  }
+  .blog-post-subtitle {
+    font-size: 17px;
+  }
+  .blog-cover-image-section,
+  .blog-article-body,
+  .next-article-section,
+  .blog-cta-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .blog-cover-image-section {
+    padding-bottom: 40px;
+  }
+  .blog-article-body {
+    padding-bottom: 48px;
+  }
+  .blog-article-content-wrapper {
+    gap: 36px;
+  }
+  .blog-section-header {
+    font-size: 20px;
+  }
+  .blog-section-paragraph {
+    font-size: 16px;
+    text-align: left;
+  }
+  .next-article-section {
+    padding-top: 20px;
+    padding-bottom: 48px;
+  }
+  .next-article-container {
+    padding-top: 32px;
+  }
+  .next-article-link {
+    padding: 20px;
+  }
+  .next-article-title {
+    font-size: 17px;
+  }
+  .blog-cta-section {
+    padding: 80px 20px;
+  }
+}
