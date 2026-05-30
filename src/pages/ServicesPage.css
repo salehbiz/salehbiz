@@ -8,7 +8,7 @@
   flex-direction: column;
   color: #fff;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip; /* clip instead of hidden allows position: sticky to work */
   box-sizing: border-box;
 }
 
