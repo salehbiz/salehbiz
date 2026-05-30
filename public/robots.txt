@@ -1,0 +1,35 @@
+# robots.txt for saleh.biz
+# Optimize crawlability for search engines and generative AI search agents
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Explicitly welcome and configure access for AI Search Engines
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: BraveBot
+Allow: /
+
+# Standard Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap Location
+Sitemap: https://saleh.biz/sitemap.xml

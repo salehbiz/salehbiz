@@ -1,0 +1,95 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://saleh.biz/#website",
+      "url": "https://saleh.biz/",
+      "name": "Salehbiz",
+      "description": "A solo studio building websites, brand systems, and automations for senior consultants and advisors.",
+      "publisher": {
+        "@id": "https://saleh.biz/#organization"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://saleh.biz/#organization",
+      "name": "Salehbiz",
+      "url": "https://saleh.biz/",
+      "logo": "https://saleh.biz/favicon.gif?v=1",
+      "image": "https://saleh.biz/og-image.png",
+      "description": "A solo studio founded by Saleh. Builds websites, brand systems, custom CRMs, and automations for senior consultants and advisors. Based in the UAE, works with clients across the UAE, UK, US, and Europe.",
+      "email": "one@saleh.biz",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Saleh",
+        "jobTitle": "Founder",
+        "sameAs": "https://linkedin.com/in/salehbiz"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/salehbiz",
+        "https://instagram.com/salehbiz"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://saleh.biz/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "I have been burned by developers before. How is this different?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fair question, and the reason most of my clients come to me in the first place. Fixed timeline, fixed price, one prototype, a few review rounds, all written down on day one. No retainers, no scope creep, no chasing for updates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a project take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A working prototype within three days. Site live in seven to fourteen days after you approve it. Larger projects with automations or AI take a few weeks more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every project is different, so every quote is different. I work with a range of budgets and shape the scope around what you actually need. We figure out the right fit on the call, and you get a flat number before anything begins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I am not technical. How much of my time will this take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Around 60 minutes across a couple of calls, plus your time in the review rounds. I handle the writing, design, build, hosting, and setup. You approve. That is it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I already have a website. It is just old. Can you redo it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Most clients come for exactly this. I rebuild from scratch so the site reflects where you are in your career today, not where you were a decade ago."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with clients outside the UAE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Most of my work is remote. I work with consultants and advisors across the UAE, UK, US, and Europe."
+          }
+        }
+      ]
+    }
+  ]
+}
