@@ -1,8 +1,88 @@
 import React, { useEffect, useState, useRef } from 'react';
 import HomeHero from '../components/HomeHero';
+import { injectSchema } from '../utils/schema';
 import './HomePage.css';
 
 const HomePage: React.FC = () => {
+  // Inject JSON-LD Organization and FAQPage schemas for SEO/GEO
+  useEffect(() => {
+    const orgSchema = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Salehbiz",
+      "url": "https://saleh.biz",
+      "description": "Custom websites, brand systems, and automations for senior consultants and advisors in the UAE and beyond.",
+      "founder": {
+        "@type": "Person",
+        "name": "Saleh"
+      },
+      "areaServed": ["UAE", "United Kingdom", "United States", "Europe"],
+      "serviceType": ["Web Design", "Brand Identity", "AI Agents", "CRM & Automations"]
+    };
+
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "I have been burned by developers before. How is this different?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fixed timeline, fixed price, one prototype, a few review rounds, all written down on day one. No retainers. No scope creep. No chasing for updates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a project take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A working prototype within three days. Site live in seven to fourteen days after you approve it. Larger projects with automations or AI take a few weeks more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every project is different, so every quote is different. I work with a range of budgets and shape the scope around what you actually need. We figure out the right fit on the call, and you get a flat number before anything begins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I am not technical. How much of my time will this take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Around 60 minutes across a couple of calls, plus your time in the review rounds. I handle the writing, design, build, hosting, and setup. You approve. That is it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I already have a website. It is just old. Can you redo it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Most clients come for exactly this. I rebuild from scratch so the site reflects where you are in your career today, not where you were a decade ago."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with clients outside the UAE?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Most of my work is remote. I work with consultants and advisors across the UAE, UK, US, and Europe."
+          }
+        }
+      ]
+    };
+
+    const cleanupOrg = injectSchema('schema-organization', orgSchema);
+    const cleanupFaq = injectSchema('schema-faq', faqSchema);
+
+    return () => {
+      cleanupOrg();
+      cleanupFaq();
+    };
+  }, []);
   const [orbitTilt, setOrbitTilt] = useState({ x: 0, y: 0 });
   const orbitContainerRef = useRef<HTMLDivElement>(null);
 

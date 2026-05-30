@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import RevealText from '../components/RevealText';
 import Navbar from '../components/Navbar';
+import { injectSchema } from '../utils/schema';
 import './AboutPage.css';
 
 const AboutPage: React.FC = () => {
@@ -18,6 +19,26 @@ const AboutPage: React.FC = () => {
   // Scroll to top on load
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
+
+  // Inject JSON-LD Person schema for SEO/GEO
+  useEffect(() => {
+    const personSchema = {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Saleh",
+      "jobTitle": "Founder, Salehbiz",
+      "url": "https://saleh.biz",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Salehbiz",
+        "url": "https://saleh.biz"
+      },
+      "description": "Solo web designer and builder specialising in websites and digital systems for senior consultants and advisors.",
+      "areaServed": ["UAE", "United Kingdom", "United States", "Europe"]
+    };
+
+    return injectSchema('schema-person', personSchema);
   }, []);
 
   const howIWork = [

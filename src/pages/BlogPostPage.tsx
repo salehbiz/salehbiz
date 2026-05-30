@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { blogPosts } from '../data/blogData';
 import Navbar from '../components/Navbar';
+import { injectSchema } from '../utils/schema';
 import './BlogPostPage.css';
 
 const BlogPostPage: React.FC = () => {
@@ -16,6 +17,35 @@ const BlogPostPage: React.FC = () => {
   // Find the active blog post
   const currentPostIndex = blogPosts.findIndex((p) => p.slug === slug);
   const post = blogPosts[currentPostIndex];
+
+  // Dynamic JSON-LD schema injection for SEO/GEO
+  useEffect(() => {
+    if (!post) return;
+
+    const articleSchema = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": post.title,
+      "description": post.subtitle,
+      "datePublished": post.date,
+      "author": {
+        "@type": "Person",
+        "name": "Saleh",
+        "url": "https://saleh.biz"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Salehbiz",
+        "url": "https://saleh.biz"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://saleh.biz/blog/${post.slug}`
+      }
+    };
+
+    return injectSchema(`schema-article-${post.slug}`, articleSchema);
+  }, [post]);
 
   if (!post) {
     return (
