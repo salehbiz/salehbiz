@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
           "name": "I have been burned by developers before. How is this different?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Fixed timeline, fixed price, one prototype, a few review rounds, all written down on day one. No retainers. No scope creep. No chasing for updates."
+            "text": "Fair question, and the reason most of my clients come to me in the first place. Fixed timeline, fixed price, one prototype, a few review rounds, all written down on day one. No retainers. No scope creep. No chasing for updates."
           }
         },
         {
