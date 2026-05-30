@@ -1,25 +1,9 @@
 {
-  "cleanUrls": true,
   "rewrites": [
-    {
-      "source": "/robots.txt",
-      "destination": "/robots.txt"
-    },
-    {
-      "source": "/sitemap.xml",
-      "destination": "/sitemap.xml"
-    },
-    {
-      "source": "/schema.json",
-      "destination": "/schema.json"
-    },
-    {
-      "source": "/assets/(.*)",
-      "destination": "/assets/$1"
-    },
-    {
-      "source": "/((?!api/).*)",
-      "destination": "/index.html"
-    }
+    { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    { "source": "/schema.json", "destination": "/schema.json" },
+    { "source": "/og-image.png", "destination": "/og-image.png" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
