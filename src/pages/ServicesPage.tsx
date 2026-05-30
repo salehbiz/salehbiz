@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import RevealText from '../components/RevealText';
 import Navbar from '../components/Navbar';
+import './HomePage.css';
 import './ServicesPage.css';
 
 const ServicesPage: React.FC = () => {
