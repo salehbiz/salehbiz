@@ -2,14 +2,14 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "www.saleh.biz"
         }
       ],
-      "destination": "https://saleh.biz/:path*",
+      "destination": "https://saleh.biz/$1",
       "permanent": true
     }
   ],
