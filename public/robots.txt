@@ -31,5 +31,11 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
 # Sitemap Location
 Sitemap: https://saleh.biz/sitemap.xml
