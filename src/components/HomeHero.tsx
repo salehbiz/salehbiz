@@ -12,6 +12,7 @@ const HomeHero: React.FC = () => {
         muted
         loop
         playsInline
+        poster="/assets/images/1MsDy3g9BqY7FoTXe3Gv7pkwx8.png"
       >
         <source src="/assets/videos/hero-background.mp4" type="video/mp4" />
       </video>
