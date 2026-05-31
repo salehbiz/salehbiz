@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import RevealText from '../components/RevealText';
 import Navbar from '../components/Navbar';
 import './HomePage.css';
@@ -70,6 +71,11 @@ const ServicesPage: React.FC = () => {
 
   return (
     <div className="services-page-container">
+      <Head>
+        <title>Services | Websites, Brand Identity & Automations for Consultants</title>
+        <meta name="description" content="Custom websites, brand systems, AI agents, and CRM automations for senior consultants and advisors. One builder, flat price, no surprises." />
+        <link rel="canonical" href="https://saleh.biz/services" />
+      </Head>
       
       {/* ─── Hero Section with Organic Background Gradient ─── */}
       <div className="services-hero-bg" style={{ backgroundImage: "url('/assets/images/1MsDy3g9BqY7FoTXe3Gv7pkwx8.png')" }}>
@@ -413,9 +419,9 @@ const ServicesPage: React.FC = () => {
               <div className="footer-detail-group">
                 <h4 className="footer-detail-title">SOCIAL</h4>
                 <div className="footer-social-links">
-                  <a href="#instagram" className="footer-social-link">Instagram</a>
-                  <a href="#linkedin" className="footer-social-link">LinkedIn</a>
-                  <a href="#x" className="footer-social-link">X</a>
+                  <a href="https://www.instagram.com/salehbiz" className="footer-social-link">Instagram</a>
+                  <a href="https://www.linkedin.com/in/salehbiz" className="footer-social-link">LinkedIn</a>
+                  <a href="https://x.com/salehbiz" className="footer-social-link">X</a>
                 </div>
               </div>
             </div>

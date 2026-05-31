@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import { projects } from '../data/projects';
 import Navbar from '../components/Navbar';
 import './ProjectDetailPage.css';
@@ -32,6 +33,11 @@ const ProjectDetailPage: React.FC = () => {
 
   return (
     <div className="project-detail-container">
+      <Head>
+        <title>{`${project.title} | Salehbiz`}</title>
+        <meta name="description" content={project.challenge} />
+        <link rel="canonical" href={`https://saleh.biz/project/${project.slug}`} />
+      </Head>
       {/* Hero Wrapper with the requested background image */}
       <div className="project-detail-hero-wrapper" style={{ backgroundImage: "url('/assets/images/1MsDy3g9BqY7FoTXe3Gv7pkwx8.png')" }}>
         {/* Dark overlay for contrast and premium look */}
@@ -271,9 +277,9 @@ const ProjectDetailPage: React.FC = () => {
               <div className="footer-detail-group">
                 <h4 className="footer-detail-title">SOCIAL</h4>
                 <div className="footer-social-links">
-                  <a href="#instagram" className="footer-social-link">Instagram</a>
-                  <a href="#linkedin" className="footer-social-link">LinkedIn</a>
-                  <a href="#x" className="footer-social-link">X</a>
+                  <a href="https://www.instagram.com/salehbiz" className="footer-social-link">Instagram</a>
+                  <a href="https://www.linkedin.com/in/salehbiz" className="footer-social-link">LinkedIn</a>
+                  <a href="https://x.com/salehbiz" className="footer-social-link">X</a>
                 </div>
               </div>
             </div>

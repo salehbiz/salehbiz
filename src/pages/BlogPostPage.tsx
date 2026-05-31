@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import { blogPosts } from '../data/blogData';
 import Navbar from '../components/Navbar';
 import { injectSchema } from '../utils/schema';
@@ -67,6 +68,11 @@ const BlogPostPage: React.FC = () => {
 
   return (
     <div className="blog-post-detail-container">
+      <Head>
+        <title>{`${post.title} | Salehbiz`}</title>
+        <meta name="description" content={post.subtitle} />
+        <link rel="canonical" href={`https://saleh.biz/blog/${post.slug}`} />
+      </Head>
       
       {/* ─── Hero Wrapper ─── */}
       <div className="blog-post-hero-wrapper" style={{ backgroundImage: "url('/assets/images/1MsDy3g9BqY7FoTXe3Gv7pkwx8.png')" }}>
@@ -182,9 +188,9 @@ const BlogPostPage: React.FC = () => {
               <div className="footer-detail-group">
                 <h4 className="footer-detail-title">SOCIAL</h4>
                 <div className="footer-social-links">
-                  <a href="#instagram" className="footer-social-link">Instagram</a>
-                  <a href="#linkedin" className="footer-social-link">LinkedIn</a>
-                  <a href="#x" className="footer-social-link">X</a>
+                  <a href="https://www.instagram.com/salehbiz" className="footer-social-link">Instagram</a>
+                  <a href="https://www.linkedin.com/in/salehbiz" className="footer-social-link">LinkedIn</a>
+                  <a href="https://x.com/salehbiz" className="footer-social-link">X</a>
                 </div>
               </div>
             </div>

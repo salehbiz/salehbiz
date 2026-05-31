@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import { blogPosts } from '../data/blogData';
 import RevealText from '../components/RevealText';
 import Navbar from '../components/Navbar';
@@ -13,6 +14,11 @@ const BlogPage: React.FC = () => {
 
   return (
     <div className="blog-page-container">
+      <Head>
+        <title>Insights | Web Strategy and Personal Brand for Senior Consultants</title>
+        <meta name="description" content="Strategy, web design, and digital presence thinking for consultants and advisors who have outgrown what they have online." />
+        <link rel="canonical" href="https://saleh.biz/blog" />
+      </Head>
       
       {/* ─── Organic Blurry Hero Background Gradient ─── */}
       <div className="blog-hero-bg" style={{ backgroundImage: "url('/assets/images/1MsDy3g9BqY7FoTXe3Gv7pkwx8.png')" }}>
@@ -105,9 +111,9 @@ const BlogPage: React.FC = () => {
                 <div className="footer-detail-group">
                   <h4 className="footer-detail-title">SOCIAL</h4>
                   <div className="footer-social-links">
-                    <a href="#instagram" className="footer-social-link">Instagram</a>
-                    <a href="#linkedin" className="footer-social-link">LinkedIn</a>
-                    <a href="#x" className="footer-social-link">X</a>
+                    <a href="https://www.instagram.com/salehbiz" className="footer-social-link">Instagram</a>
+                    <a href="https://www.linkedin.com/in/salehbiz" className="footer-social-link">LinkedIn</a>
+                    <a href="https://x.com/salehbiz" className="footer-social-link">X</a>
                   </div>
                 </div>
               </div>

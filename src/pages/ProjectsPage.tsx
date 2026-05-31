@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import { projects } from '../data/projects';
 import RevealText from '../components/RevealText';
 import Navbar from '../components/Navbar';
@@ -8,6 +9,11 @@ import './ProjectsPage.css';
 const ProjectsPage: React.FC = () => {
   return (
     <div className="projects-page-container">
+      <Head>
+        <title>Projects | Consulting Website Design Work by Salehbiz</title>
+        <meta name="description" content="A small body of work taken personally. Website and digital system projects for senior consultants and advisors in the UAE and beyond." />
+        <link rel="canonical" href="https://saleh.biz/project" />
+      </Head>
 
       {/* ─── Page-wide Background Video (Absolute at top) ─── */}
       <div className="projects-bg-wrapper">
@@ -97,9 +103,9 @@ const ProjectsPage: React.FC = () => {
                 <div className="footer-detail-group">
                   <h4 className="footer-detail-title">SOCIAL</h4>
                   <div className="footer-social-links">
-                    <a href="#instagram" className="footer-social-link">Instagram</a>
-                    <a href="#linkedin" className="footer-social-link">LinkedIn</a>
-                    <a href="#x" className="footer-social-link">X</a>
+                    <a href="https://www.instagram.com/salehbiz" className="footer-social-link">Instagram</a>
+                    <a href="https://www.linkedin.com/in/salehbiz" className="footer-social-link">LinkedIn</a>
+                    <a href="https://x.com/salehbiz" className="footer-social-link">X</a>
                   </div>
                 </div>
               </div>

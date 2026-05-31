@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Head } from 'vite-react-ssg';
 import Navbar from '../components/Navbar';
 import './ContactPage.css';
 
@@ -22,6 +23,11 @@ const ContactPage: React.FC = () => {
 
   return (
     <div className="contact-page-container">
+      <Head>
+        <title>Book a Call | Salehbiz</title>
+        <meta name="description" content="Book a 20-minute call with Saleh. No pitch, no packages. Just clarity on what your website should be doing for your consulting practice." />
+        <link rel="canonical" href="https://saleh.biz/contact" />
+      </Head>
       {/* Immersive Video Hero Background */}
       <div className="contact-hero-bg-container">
         <video
@@ -163,9 +169,9 @@ const ContactPage: React.FC = () => {
               <div className="footer-detail-group">
                 <h4 className="footer-detail-title">SOCIAL</h4>
                 <div className="footer-social-links">
-                  <a href="#instagram" className="footer-social-link">Instagram</a>
-                  <a href="#linkedin" className="footer-social-link">LinkedIn</a>
-                  <a href="#x" className="footer-social-link">X</a>
+                  <a href="https://www.instagram.com/salehbiz" className="footer-social-link">Instagram</a>
+                  <a href="https://www.linkedin.com/in/salehbiz" className="footer-social-link">LinkedIn</a>
+                  <a href="https://x.com/salehbiz" className="footer-social-link">X</a>
                 </div>
               </div>
             </div>

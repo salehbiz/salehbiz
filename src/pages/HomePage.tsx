@@ -827,9 +827,9 @@ const HomePage: React.FC = () => {
               <div className="footer-detail-group">
                 <h4 className="footer-detail-title">SOCIAL</h4>
                 <div className="footer-social-links">
-                  <a href="#instagram" className="footer-social-link">Instagram</a>
-                  <a href="#linkedin" className="footer-social-link">LinkedIn</a>
-                  <a href="#x" className="footer-social-link">X</a>
+                  <a href="https://www.instagram.com/salehbiz" className="footer-social-link">Instagram</a>
+                  <a href="https://www.linkedin.com/in/salehbiz" className="footer-social-link">LinkedIn</a>
+                  <a href="https://x.com/salehbiz" className="footer-social-link">X</a>
                 </div>
               </div>
             </div>
